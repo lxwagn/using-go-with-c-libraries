@@ -32,7 +32,7 @@ $
 
 ### Step-By-Step
 
-####1. Build a Shared, Dynamic Library (More Common)
+#### Step 1: Build a Shared, Dynamic Library (More Common)
 
 First, compile the source into an object file:
 
@@ -48,7 +48,7 @@ gcc -shared -o libmylib.so mylib.o
 
 The file src/Makefile contains the full, working code.
 
-#####Building a Static Library (Less Common)
+##### Building a Static Library (Less Common)
 
 Instead of building a dynamic library, a static library can be created.
 
@@ -69,7 +69,7 @@ ranlib libmylib.a
 
 The file src/Makefile contains the full, working code.
 
-####2. Add the Go Headers
+#### Step 2: Add the Go Headers
 
 At this point, you can refer to the provided Go code. Let's take a look at it as a whole 
 and then break it down line-by-line:
@@ -126,7 +126,7 @@ Go understands that this is no ordinary comment.
 
 ```import "C"```
 
-####3. Add the Go Code
+#### Step 3: Add the Go Code
  
 Now comes the best part:
  
