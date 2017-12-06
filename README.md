@@ -2,18 +2,22 @@
 
 #### Lucas Wagner
 
-Since Go has its roots in C and in C's design team at Bell Labs, straightforward compatibility
-with C was built-in from the beginning. 
+Since Go has its roots in C and in C's design team at Bell Labs, Go compatibility
+with C was important to its designers. Whenever a Go source file imports "C", it 
+is using cgo. cgo allows code reuse from C. 
 
-Why reuse code? In many cases, particularly with legacy code, it 
-can often be easier to link to compiled C code libraries instead of rewriting 
-tested, tried-and-true code that was painstakingly created over weeks, months, or years.
+There are countless reasons to reuse C code. Security, simplicity, and saving 
+time/money are large ones. Sometimes a developer might want to use a library with Go 
+where first-class language support is available for C developers.
 
-Likewise, sometimes a developer might want to use a library with Go that is only available 
-for C developers for various reasons like security or simplicity.
+Additionally, there are edge cases that inevitably happen with legacy languages like C. 
+Sometimes the source code (or the person who wrote the code) cannot be 
+found and the compiled library and header file are all that remain. Other 
+times, it just makes sense to use tried-and-true code that was created 
+and tested over weeks, months, or years.
 
-Go allows C linking against libraries or pasting in in-line code. In this demo, both will be
-shown in the familiar "Hello World" format.
+Go allows linking against C libraries or pasting in in-line code. In this demo, 
+both will be shown in the familiar "Hello World" format.
 
 ### Quickstart
 
