@@ -93,9 +93,9 @@ import "C"
 
 Let's go through these. Go has some configurable #cgo items, such as
 compiler flags (CFLAGS) and linker flags (LDFLAGS). First, we'll need to include 
-the current directory for the headers we're going to include below:
+the `src` directory for the headers we're going to include below:
 
-```#cgo CFLAGS: -I.```
+```#cgo CFLAGS: -I./src```
 
 Next, we're going to include the ./lib directory in our build linkage path and 
 in our runtime linkage path. We're going to our shared library, libmylib.so: 
